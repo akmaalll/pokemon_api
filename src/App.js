@@ -5,7 +5,7 @@ import "./index.css";
 function App() {
   const [allPokemon, setAllPokemon] = useState([]);
   const [loadMore, setLoadMore] = useState(
-    "https://pokeapi.co/api/v2/pokemon?limit=10"
+    "https://pokeapi.co/api/v2/pokemon?limit=5"
   );
 
   const getAllPokemon = async () => {
@@ -42,7 +42,7 @@ function App() {
       <h1 className="text-3xl font-bold text-center pb-10">
         Pokemon Evolution
       </h1>
-      <div className="">
+      <div className="flex flex-col items-center">
         <div className="gap-5 flex flex-wrap justify-center ">
           {allPokemon.map((pokemon) => (
             <Card
